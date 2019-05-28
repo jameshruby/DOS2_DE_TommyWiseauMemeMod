@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="3" build="1" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="6d811cc4-140f-419b-8c4e-0443419403bc" type="23" />
+            <attribute id="Name" value="TommyWiseauMemeMod" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="6d811cc4-140f-419b-8c4e-0443419403bc" type="23" />
+        </node>
+    </region>
+</save>
