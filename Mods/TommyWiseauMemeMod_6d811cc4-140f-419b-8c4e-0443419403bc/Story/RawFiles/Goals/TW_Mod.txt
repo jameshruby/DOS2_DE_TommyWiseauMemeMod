@@ -1,0 +1,30 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+DB_IsPlayer(_Player)
+THEN
+CharacterLevelUpTo(_Player, 10); 
+CharacterAddAbilityPoint(_Player, 1);
+CharacterAddAbility(_Player, "Polymorph", 1);
+CharacterAddSkill(_Player, "Target_ChickenTouch");
+
+ProcObjectTimer(_Player, "KilledDelay", 5000);
+
+PROC
+ProcObjectTimerFinished(_Player, "KilledDelay")
+AND
+DB_IsPlayer((CHARACTERGUID)_Player)
+AND
+GetPosition(_Player,_X,_Y,_Z)
+THEN
+//PlayEffect(_Player, "RS3_FX_TommyWiseauJustChicken"); //"RS3_FX_Skills_Warrior_BlinkStrike_Cast_012"
+//PlayEffectAtPosition("EFFECTRESOURCEGUID_TommyWiseauJustChicken2_2db8eda1-308e-4bd8-951a-b5b8ed91d9c8",_X,_Y,_Z);
+DisplayText(_Player, "Ummm, the Well!"); 
+//CharacterPlayHUDSoundResource((CHARACTERGUID)_Player, SOUNDRESOURCEGUID_Johny_JustAChickenCheep_42bb1d2a-e905-4b00-9a9a-806615e33d8c);
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"
